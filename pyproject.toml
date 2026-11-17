@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digital-forensic-evidence-analyzer"
+version = "0.1.0"
+description = "Inventory digital evidence, record file metadata, and export investigation timelines."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+]
+
+[project.scripts]
+evidence-analyzer = "evidence_analyzer.cli:main"
+evidence-analyzer-gui = "evidence_analyzer.gui:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
